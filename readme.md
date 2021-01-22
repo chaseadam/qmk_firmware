@@ -1,3 +1,9 @@
+As modified by Adam Chasen for Willy. Used on Fedora 33.
+
+Flashed keyboard with JSON from https://config.qmk.fm/#/ `atreus/promicro` selected
+
+`./bin/qmk flash <JSON file>`
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
