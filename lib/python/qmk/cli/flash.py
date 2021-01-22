@@ -76,7 +76,7 @@ def flash(cli):
 
     if cli.args.filename:
         # Handle compiling a configurator JSON
-        user_keymap = parse_configurator_json(cli.args.filename, parallel=cli.config.flash.parallel)
+        user_keymap = parse_configurator_json(cli.args.filename)
         keymap_path = qmk.path.keymap(user_keymap['keyboard'])
         command = compile_configurator_json(user_keymap, cli.args.bootloader, **envs)
 
