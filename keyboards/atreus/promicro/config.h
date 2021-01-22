@@ -28,12 +28,17 @@
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F4, B2, B4, B5 }
-#if defined(PCBDOWN)
-  #define MATRIX_COL_PINS { D0, D4, C6, D7, E6, B6, B3, B1, F7, F6, F5 }
-#else
-  #define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B6, E6, D7, C6, D4, D0 }
-#endif
+
+/* Adam Chasen 20210122
+ * adjusted to willy's hand built keyboard. Used the following pinout diagram with advice below:
+ * > It is the "Pxy" designation you are after (P="Port", x=port letter, y=bit on port).
+ * > Apparently those macros in QMK omit the 'P'. For instance PF6 in this chart is 'F6' in QMK. (Port F, bit 6)
+ * Source: https://geekhack.org/index.php?PHPSESSID=htjvivbmbcaitb3poiqe0vt1r51pbecv&topic=102327.msg2807728#msg2807728
+ *
+ * Diagram: https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMicro16MHzv1.pdf
+*/
+#define MATRIX_ROW_PINS { F7, B1, B3, B2 }
+#define MATRIX_COL_PINS { F6, F5, F4, B5, B4, E6, D7, C6, D4, D0, D1 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
